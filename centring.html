@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRF Traders</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!--  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.jpeg"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <!-- ================= TOP HEADER ================= -->
+    <div class="top-header">
+      <div class="container">
+        <div class="head-location">
+          <div class="btn-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <p>
+            No. 625/50, Mini Market MKN Rd, <br />
+            Guindy, Chennai
+          </p>
+        </div>
+
+        <div class="head-email">
+          <div class="btn-icon"><i class="fa-solid fa-envelope"></i></div>
+          <a href="mailto:enquiry@srftraders.in">enquiry@srftraders.in</a>
+        </div>
+
+        <div class="head-social">
+          <a
+            href="https://www.instagram.com/srftraders/"
+            target="_blank"
+            class="btn-icon"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://wa.me/919884292233" target="_blank" class="btn-icon"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61588189371364"
+            target="_blank"
+            class="btn-icon"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+      <div class="container">
+        <div class="logo"><img src="./assets/img/logo.jpeg" alt="Logo" /></div>
+
+        <button class="hamburger" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars icon-bars"></i>
+          <i class="fa-solid fa-xmark icon-close"></i>
+        </button>
+
+        <div class="menu-bar" id="menu-bar">
+          <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+
+            <li>
+              <div
+                class="sub-menu"
+                tabindex="0"
+                role="button"
+                aria-expanded="false"
+              >
+                Products <i class="fa-solid fa-angle-down"></i>
+                <ul class="sub-list" aria-hidden="true">
+                  <li>
+                    <a href="./allproduccts.html"
+                      ><i class="fa-solid fa-chevron-right"></i> All PRODUCTS</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./centring.html"
+                      ><i class="fa-solid fa-chevron-right"></i> CENTRING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./scaffolding.html"
+                      ><i class="fa-solid fa-chevron-right"></i> SCAFFOLDING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./accessories.html"
+                      ><i class="fa-solid fa-chevron-right"></i> ACCESSORIES</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-btn">
+          <a href="tel:919884292233" class="call-btn">
+            <div class="btn-icon"><i class="fa-solid fa-phone"></i></div>
+            Call And Order
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-overlay"></div>
+
+    <!--  -->
+    <section class="hero-wrap">
+      <div class="hero-card hero-card-page">
+        <!-- Replace with your same image -->
+        <img
+          src="./assets/img/Banner/Centring.jpg"
+          class="hero-img"
+          alt="Roofing worker"
+        />
+
+        <div
+          class="hero-content"
+          style="
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+          "
+        >
+          <h1 class="hero-title">Centring</h1>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <section class="productsection">
+      <h2 class="productsection-title">Our Products</h2>
+
+      <div class="productsection-grid">
+        <!-- CARD 1 -->
+        <div class="productsection-card" onclick="openProduct(0)">
+          <img
+            src="./assets/img/Centring/angle-sheet.jpg"
+            class="productsection-img"
+          />
+          <div class="productsection-body">
+            <h3>Angle Sheet</h3>
+            <p>Corner slab formwork reinforcement</p>
+          </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="productsection-card" onclick="openProduct(1)">
+          <img
+            src="./assets/img/Centring/folding-sheet.jpg"
+            class="productsection-img"
+          />
+          <div class="productsection-body">
+            <h3>Folding Sheet</h3>
+            <p>Flexible & space-saving formwork</p>
+          </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="productsection-card" onclick="openProduct(2)">
+          <img
+            src="./assets/img/Centring/prop-jack.jpg"
+            class="productsection-img"
+          />
+          <div class="productsection-body">
+            <h3>Prop Jack</h3>
+            <p>Telescopic slab support system</p>
+          </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="productsection-card" onclick="openProduct(3)">
+          <img
+            src="./assets/img/Centring/telescopic-span.jpg"
+            class="productsection-img"
+          />
+          <div class="productsection-body">
+            <h3>Telescopic Span</h3>
+            <p>Horizontal shoring support</p>
+          </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="productsection-card" onclick="openProduct(4)">
+          <img
+            src="./assets/img/Centring/colomb-box.jpg"
+            class="productsection-img"
+          />
+          <div class="productsection-body">
+            <h3>Colombox</h3>
+            <p>Column casting formwork box</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MODAL ================= -->
+
+    <div class="productsection-modal" id="productModal">
+      <div class="productsection-modal-box">
+        <span class="productsection-close" onclick="closeProduct()">×</span>
+        <div id="productModalContent"></div>
+      </div>
+    </div>
+    <!-- footer section-->
+    <!-- footer section-->
+    <section class="contactsection">
+      <!-- QUOTE -->
+      <div class="contactsection-quote">
+        <div class="contactsection-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7774.830579089614!2d80.19665828949421!3d13.00920520274615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526741f3cda7b3%3A0xf51ef681e3c84bdd!2sS.R.F%20Traders%20-%20Dealers%20in%20used%20centring%20sheet%20%26%20scaffolding%20materials%20in%20all%20over%20south%20india!5e0!3m2!1sen!2sin!4v1770545204183!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="contactsection-right">
+          <form
+            id="quoteForm"
+            action="https://formsubmit.co/enquiry@srftraders.in"
+            method="POST"
+            class="contactsection-form"
+          >
+            <h2>Request Quote Form</h2>
+
+            <div class="contactsection-grid">
+              <input placeholder="Full Name" />
+              <input placeholder="Email Address" />
+
+              <input placeholder="Phone" />
+            </div>
+
+            <button class="contactsection-btn">
+              Submit Request <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="contactsection-footer">
+        <div>
+          <h4>Office Address</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              No. 625/50, Mini Market MKN Rd, <br />
+              Guindy, Chennai
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-user"></i><a href="./aboutus.html">About</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-gear"></i
+              ><a href="./allproduccts.html">Products</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i
+              ><a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Numbers</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9361088550">93610 88550</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9884292233">98842 92233</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9962553377">99625 53377</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Email</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:enquiry@srftraders.in"> enquiry@srftraders.in</a>
+            </li>
+          </ul>
+
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61588189371364"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/srftraders/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/srf-traders/about/?viewAsMember=true"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://wa.me/919884292233"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contactsection-copy">
+        © Copyright 2018 - 2026 | Website Builder by Right Click Digital
+        Solution | All Rights Reserved
+      </div>
+    </section>
+
+    <div class="float-icons">
+      <a href="tel:919884292233" class="icon-flote right-icon"
+        ><i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="https://wa.me/919884292233" class="icon-flote left-icon">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <script src="./assets/script.js"></script>
+
+    <script>
+      const products = [
+        {
+          title: "ANGLE SHEET",
+          img: "./assets/img/Centring/angle-sheet.jpg",
+          desc: `The Angle Sheet is a fundamental component in slab formwork, designed to provide seamless transitions and structural reinforcement at corner joints. Manufactured from high-grade MS (Mild Steel), these sheets prevent grout leakage and ensure sharp, clean edges for concrete slabs and beams. Their robust construction resists warping under the heavy pressure of wet concrete, making them a reusable and cost-effective solution for large-scale infrastructure projects. By integrating these into your centring setup, you achieve superior surface finishes and structural integrity.`,
+          points: [
+            "Material: High-Tensile Mild Steel",
+            "Application: Slab edges, beam corners, and wall formwork.",
+            "Standard Thickness: 2.0mm / 2.5mm / 3.0mm",
+            "Features: Rust-resistant coating, precision-bent angles, and high reusability.",
+          ],
+        },
+
+        {
+          title: "FOLDING SHEET",
+          img: "./assets/img/Centring/folding-sheet.jpg",
+          desc: `Our Folding Sheets are specifically engineered for versatile formwork applications where flexibility and ease of storage are paramount. These sheets allow for quick assembly and dismantling, significantly reducing labor time and overhead costs during the centring process. Designed to withstand high hydrostatic pressure, the folding mechanism remains rigid once locked into place, ensuring no deflection during the pouring of concrete. Ideal for varying slab geometries, these sheets provide a smooth, professional-grade finish every time.`,
+          points: [
+            "Material: Premium Cold Rolled Steel",
+            "Standard Thickness: 2.0mm / 2.5mm",
+            "Key Advantage: Space-saving design for easy transport and rapid site installation.",
+            "Durability: Treated with anti-corrosive paint or galvanized finish.",
+          ],
+        },
+
+        {
+          title: "PROP JACK (PROP JOCK)",
+          img: "./assets/img/Centring/prop-jack.jpg",
+          desc: `The Prop Jack (often referred to as Prop Jock) is a high-capacity telescopic support system used to sustain the weight of the slab formwork during construction. Featuring a fine-tuning thread mechanism, it allows for millimetre-perfect height adjustments to ensure the slab is perfectly level. Our Prop Jacks are built with heavy-duty outer and inner tubes to prevent buckling under intense axial loads. These are essential for both residential and commercial high-rise buildings, offering a reliable, adjustable, and safe shoring solution.`,
+          points: [
+            "Height Variants: 2.0m to 3.75m | 3.0m to 4.5m (Custom sizes available)",
+            "Tube Thickness: 2.0mm / 3.0mm depending on load requirements.",
+            "Weight Details: Approx. 18kg to 22kg (Variable based on height and thickness).",
+            "Adjustment: High-grade threaded sleeve for precision leveling.",
+          ],
+        },
+
+        {
+          title: "SPAN (TELESCOPIC SPAN)",
+          img: "./assets/img/Centring/telescopic-span.jpg",
+          desc: `Telescopic Spans are high-strength horizontal shoring members designed to support centring sheets across large voids without the need for intermediate vertical supports. These spans consist of an outer and inner member that can be extended to the required length, providing immense load-bearing capacity for slab casting. Our spans are designed with a camber to counteract the natural deflection that occurs when concrete is poured, ensuring a perfectly flat ceiling. They are the go-to choice for contractors looking to maximize floor space during the construction process.`,
+          points: [
+            "Outer Member Thickness: 2.0mm / 2.5mm",
+            "Inner Member Thickness: 2.0mm / 2.5mm",
+            "Standard Sizes: 2.5m x 2.5m & 3m x 3m (Extended up to 5.5m) or custom variants.",
+            "Weight Details: Typically ranges from 35kg to 55kg depending on the gauge and length.",
+            "Locking Mechanism: Heavy-duty lattice bracing for maximum lateral stability.",
+          ],
+        },
+
+        {
+          title: "COLOMBOX (COLUMN BOX)",
+          img: "./assets/img/Centring/colomb-box.jpg",
+          desc: `The Colombox is a specialized formwork system designed for the rapid and accurate casting of square or rectangular concrete columns. Constructed from reinforced steel plates, these boxes are easy to assemble using simple nut-and-bolt or wedge-and-pin systems. The rigid design ensures that the column maintains its verticality and dimensions under the extreme pressure of deep-pour concrete. Available in various adjustable sizes, the Colombox is indispensable for maintaining structural uniformity across multiple floors in a building project.`,
+          points: [
+            "Standard Thickness: 3.0mm to 5.0mm face plates.",
+            "Variants: Fixed sizes or Adjustable Column Boxes.",
+            "Reinforcement: Fitted with heavy-duty MS angles and channels for zero-bulge performance.",
+            "Weight Details: Varies significantly based on height (3ft, 4ft, 5ft, 7ft & 9ft units).",
+          ],
+        },
+      ];
+
+      function openProduct(i) {
+        const p = products[i];
+        document.getElementById("productModalContent").innerHTML = `
+            <img src="${p.img}" style="width:100%;border-radius:8px;margin-bottom:15px;">
+          <h2>${p.title}</h2>
+   <p>${p.desc}</p>
+   <ul>${p.points.map((x) => `<li>${x}</li>`).join("")}</ul>`;
+        document.getElementById("productModal").classList.add("active");
+      }
+
+      function closeProduct() {
+        document.getElementById("productModal").classList.remove("active");
+      }
+
+      window.onclick = (e) => {
+        if (e.target.id === "productModal") closeProduct();
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRF Traders</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!--  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.jpeg"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <!-- ================= TOP HEADER ================= -->
+    <div class="top-header">
+      <div class="container">
+        <div class="head-location">
+          <div class="btn-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <p>
+            No. 625/50, Mini Market MKN Rd, <br />
+            Guindy, Chennai
+          </p>
+        </div>
+
+        <div class="head-email">
+          <div class="btn-icon"><i class="fa-solid fa-envelope"></i></div>
+          <a href="mailto:enquiry@srftraders.in">enquiry@srftraders.in</a>
+        </div>
+
+        <div class="head-social">
+          <a
+            href="https://www.instagram.com/srftraders/"
+            target="_blank"
+            class="btn-icon"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://wa.me/919884292233" target="_blank" class="btn-icon"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61588189371364"
+            target="_blank"
+            class="btn-icon"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+      <div class="container">
+        <div class="logo"><img src="./assets/img/logo.jpeg" alt="Logo" /></div>
+
+        <button class="hamburger" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars icon-bars"></i>
+          <i class="fa-solid fa-xmark icon-close"></i>
+        </button>
+
+        <div class="menu-bar" id="menu-bar">
+          <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+
+            <li>
+              <div
+                class="sub-menu"
+                tabindex="0"
+                role="button"
+                aria-expanded="false"
+              >
+                Products <i class="fa-solid fa-angle-down"></i>
+                <ul class="sub-list" aria-hidden="true">
+                  <li>
+                    <a href="./allproduccts.html"
+                      ><i class="fa-solid fa-chevron-right"></i> All PRODUCTS</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./centring.html"
+                      ><i class="fa-solid fa-chevron-right"></i> CENTRING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./scaffolding.html"
+                      ><i class="fa-solid fa-chevron-right"></i> SCAFFOLDING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./accessories.html"
+                      ><i class="fa-solid fa-chevron-right"></i> ACCESSORIES</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-btn">
+          <a href="tel:919884292233" class="call-btn">
+            <div class="btn-icon"><i class="fa-solid fa-phone"></i></div>
+            Call And Order
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-overlay"></div>
+    <!--  -->
+    <!--  -->
+    <section class="hero-wrap">
+      <div class="hero-card hero-card-page">
+        <!-- Replace with your same image -->
+        <img
+          src="./assets/img/Banner/Contact us.jpg"
+          class="hero-img"
+          alt="Roofing worker"
+        />
+
+        <div
+          class="hero-content"
+          style="
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+          "
+        >
+          <h1 class="hero-title">Contact Us</h1>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <section class="contactpage-wrapper">
+      <div class="contactpage-container">
+        <!-- LEFT FORM -->
+        <div class="contactpage-formcard">
+          <div class="contactpage-smalltitle">Contact Us</div>
+          <h2 class="contactpage-title">Get In Touch</h2>
+
+          <form
+            id="quoteForm"
+            action="https://formsubmit.co/enquiry@srftraders.in"
+            method="POST"
+            class="contactpage-inputgroup"
+          >
+            <input class="contactpage-input" placeholder="Your Name" />
+            <input class="contactpage-input" placeholder="Email" />
+            <input class="contactpage-input" placeholder="Subject" />
+            <textarea
+              class="contactpage-textarea"
+              placeholder="Type here..."
+            ></textarea>
+            <button class="contactpage-button">Send Now</button>
+          </form>
+        </div>
+
+        <!-- RIGHT INFO -->
+        <div class="contactpage-right">
+          <p class="contactpage-description">
+            We’re happy to help you with any questions or project inquiries.
+            Reach out using the details below or send us a message using the
+            form.
+          </p>
+
+          <!-- MAP -->
+          <div class="contactpage-map">
+            <img src="./assets/img/Contact us.jpg.jpeg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <!-- footer section-->
+    <section class="contactsection">
+      <!-- QUOTE -->
+      <div class="contactsection-quote">
+        <div class="contactsection-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7774.830579089614!2d80.19665828949421!3d13.00920520274615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526741f3cda7b3%3A0xf51ef681e3c84bdd!2sS.R.F%20Traders%20-%20Dealers%20in%20used%20centring%20sheet%20%26%20scaffolding%20materials%20in%20all%20over%20south%20india!5e0!3m2!1sen!2sin!4v1770545204183!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="contactsection-right">
+          <form
+            id="quoteForm"
+            action="https://formsubmit.co/enquiry@srftraders.in"
+            method="POST"
+            class="contactsection-form"
+          >
+            <h2>Request Quote Form</h2>
+
+            <div class="contactsection-grid">
+              <input placeholder="Full Name" />
+              <input placeholder="Email Address" />
+
+              <input placeholder="Phone" />
+            </div>
+
+            <button class="contactsection-btn">
+              Submit Request <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="contactsection-footer">
+        <div>
+          <h4>Office Address</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              No. 625/50, Mini Market MKN Rd, <br />
+              Guindy, Chennai
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-user"></i><a href="./aboutus.html">About</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-gear"></i
+              ><a href="./allproduccts.html">Products</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i
+              ><a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Numbers</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9361088550">93610 88550</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9884292233">98842 92233</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9962553377">99625 53377</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Email</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:enquiry@srftraders.in"> enquiry@srftraders.in</a>
+            </li>
+          </ul>
+
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61588189371364"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/srftraders/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/srf-traders/about/?viewAsMember=true"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://wa.me/919884292233"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contactsection-copy">
+        © Copyright 2018 - 2026 | Website Builder by Right Click Digital
+        Solution | All Rights Reserved
+      </div>
+    </section>
+
+    <div class="float-icons">
+      <a href="tel:919884292233" class="icon-flote right-icon"
+        ><i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="https://wa.me/919884292233" class="icon-flote left-icon">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRF Traders</title>
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!--  -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.jpeg"
+      type="image/x-icon"
+    />
+    <style>
+      :root {
+        --primary: #0d0d0d;
+        --white: #ffffff;
+        --blue: #316399;
+        --gray: #757575;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", sans-serif;
+        background: #f3f5f8;
+      }
+
+      /* ================= SECTION ================= */
+
+      .productsection {
+        padding: 90px 20px;
+      }
+
+      .productsection-title {
+        text-align: center;
+        font-size: 40px;
+        font-weight: 800;
+        margin-bottom: 60px;
+      }
+
+      /* ================= GRID ================= */
+
+      .productsection-grid {
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* ================= CARD ================= */
+
+      .productsection-card {
+        width: 320px;
+        background: white;
+        border-radius: 18px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.35s;
+        border: 1px solid #e5e5e5;
+        opacity: 0;
+        transform: translateY(40px);
+        animation: productsectionFadeUp 0.8s forwards;
+      }
+
+      .productsection-card img {
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      @keyframes productsectionFadeUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .productsection-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .productsection-body {
+        padding: 22px;
+      }
+
+      .productsection-body h3 {
+        margin: 0 0 8px;
+        font-size: 18px;
+      }
+
+      .productsection-body p {
+        margin: 0;
+        color: var(--gray);
+        font-size: 14px;
+      }
+
+      /* ================= MODAL ================= */
+
+      .productsection-modal {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.65);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        z-index: 999;
+      }
+
+      .productsection-modal.active {
+        display: flex;
+      }
+
+      .productsection-modal-box {
+        background: white;
+        max-width: 900px;
+        width: 100%;
+        border-radius: 20px;
+        padding: 40px;
+        max-height: 90vh;
+        overflow-y: auto;
+        animation: productsectionPop 0.3s ease;
+        position: relative;
+      }
+
+      @keyframes productsectionPop {
+        from {
+          transform: scale(0.9);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .productsection-close {
+        position: absolute;
+        right: 18px;
+        top: 12px;
+        font-size: 26px;
+        cursor: pointer;
+        color: #888;
+      }
+
+      .productsection-modal h2 {
+        margin-top: 0;
+        color: var(--blue);
+      }
+
+      .productsection-modal p {
+        line-height: 1.6;
+      }
+
+      .productsection-modal ul {
+        padding-left: 20px;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ================= TOP HEADER ================= -->
+    <div class="top-header">
+      <div class="container">
+        <div class="head-location">
+          <div class="btn-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <p>
+            No. 625/50, Mini Market MKN Rd, <br />
+            Guindy, Chennai
+          </p>
+        </div>
+
+        <div class="head-email">
+          <div class="btn-icon"><i class="fa-solid fa-envelope"></i></div>
+          <a href="mailto:enquiry@srftraders.in">enquiry@srftraders.in</a>
+        </div>
+
+        <div class="head-social">
+          <a
+            href="https://www.instagram.com/srftraders/"
+            target="_blank"
+            class="btn-icon"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a href="https://wa.me/919884292233" target="_blank" class="btn-icon"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61588189371364"
+            target="_blank"
+            class="btn-icon"
+            ><i class="fa-brands fa-facebook-f"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= HEADER ================= -->
+    <header>
+      <div class="container">
+        <div class="logo"><img src="./assets/img/logo.jpeg" alt="Logo" /></div>
+
+        <button class="hamburger" aria-label="Toggle menu">
+          <i class="fa-solid fa-bars icon-bars"></i>
+          <i class="fa-solid fa-xmark icon-close"></i>
+        </button>
+
+        <div class="menu-bar" id="menu-bar">
+          <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./aboutus.html">About Us</a></li>
+
+            <li>
+              <div
+                class="sub-menu"
+                tabindex="0"
+                role="button"
+                aria-expanded="false"
+              >
+                Products <i class="fa-solid fa-angle-down"></i>
+                <ul class="sub-list" aria-hidden="true">
+                  <li>
+                    <a href="./allproduccts.html"
+                      ><i class="fa-solid fa-chevron-right"></i> All PRODUCTS</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./centring.html"
+                      ><i class="fa-solid fa-chevron-right"></i> CENTRING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./scaffolding.html"
+                      ><i class="fa-solid fa-chevron-right"></i> SCAFFOLDING</a
+                    >
+                  </li>
+                  <li>
+                    <a href="./accessories.html"
+                      ><i class="fa-solid fa-chevron-right"></i> ACCESSORIES</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="header-btn">
+          <a href="tel:919884292233" class="call-btn">
+            <div class="btn-icon"><i class="fa-solid fa-phone"></i></div>
+            Call And Order
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-overlay"></div>
+
+    <!--  -->
+    <section class="hero-wrap">
+      <div class="hero-card hero-card-page">
+        <!-- Replace with your same image -->
+        <img
+          src="./assets/img/Banner/Accessories.jpg"
+          class="hero-img"
+          alt="Roofing worker"
+        />
+
+        <div
+          class="hero-content"
+          style="
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: start;
+            justify-content: center;
+            flex-direction: column;
+          "
+        >
+          <h1 class="hero-title">Accessories</h1>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+
+    <section class="productsection">
+      <h2 class="productsection-title">Our Products</h2>
+
+      <div class="productsection-grid" id="productGrid"></div>
+    </section>
+
+    <!-- MODAL -->
+
+    <div class="productsection-modal" id="productModal">
+      <div class="productsection-modal-box">
+        <span class="productsection-close" onclick="closeProduct()">×</span>
+        <div id="productModalContent"></div>
+      </div>
+    </div>
+    <!-- footer section-->
+    <!-- footer section-->
+    <section class="contactsection">
+      <!-- QUOTE -->
+      <div class="contactsection-quote">
+        <div class="contactsection-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7774.830579089614!2d80.19665828949421!3d13.00920520274615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526741f3cda7b3%3A0xf51ef681e3c84bdd!2sS.R.F%20Traders%20-%20Dealers%20in%20used%20centring%20sheet%20%26%20scaffolding%20materials%20in%20all%20over%20south%20india!5e0!3m2!1sen!2sin!4v1770545204183!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="contactsection-right">
+          <form
+            id="quoteForm"
+            action="https://formsubmit.co/enquiry@srftraders.in"
+            method="POST"
+            class="contactsection-form"
+          >
+            <h2>Request Quote Form</h2>
+
+            <div class="contactsection-grid">
+              <input placeholder="Full Name" />
+              <input placeholder="Email Address" />
+
+              <input placeholder="Phone" />
+            </div>
+
+            <button class="contactsection-btn">
+              Submit Request <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="contactsection-footer">
+        <div>
+          <h4>Office Address</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              No. 625/50, Mini Market MKN Rd, <br />
+              Guindy, Chennai
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-user"></i><a href="./aboutus.html">About</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-gear"></i
+              ><a href="./allproduccts.html">Products</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i
+              ><a href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact Numbers</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9361088550">93610 88550</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9884292233">98842 92233</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:9962553377">99625 53377</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Email</h4>
+          <ul>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:enquiry@srftraders.in"> enquiry@srftraders.in</a>
+            </li>
+          </ul>
+
+          <div class="footer-social-icons">
+            <a href="https://www.facebook.com/profile.php?id=61588189371364"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="https://www.instagram.com/srftraders/"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/srf-traders/about/?viewAsMember=true"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://wa.me/919884292233"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contactsection-copy">
+        © Copyright 2018 - 2026 | Website Builder by Right Click Digital
+        Solution | All Rights Reserved
+      </div>
+    </section>
+
+    <div class="float-icons">
+      <a href="tel:919884292233" class="icon-flote right-icon"
+        ><i class="fa-solid fa-phone"></i>
+      </a>
+      <a href="https://wa.me/919884292233" class="icon-flote left-icon">
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+    <script src="./assets/script.js"></script>
+
+    <script>
+      const products = [
+        {
+          title: "PROP NUT",
+          short: "Height locking nut for props",
+          img: "./assets/img/Accessories/prop-nut.jpg",
+          desc: `The Prop Nut is the high-stress component of a telescopic prop, responsible for adjusting and holding the height of the inner tube. Cast from high-grade malleable iron or forged steel, our prop nuts feature a heavy-duty handle (often called 'ears') for easy manual adjustment even under load. The internal threading is precision-machined to ensure smooth movement along the prop sleeve without jamming. Designed to withstand massive vertical pressure, it is a vital safety component for any slab support system.`,
+          points: [
+            "Material: Malleable Cast Iron / Forged Steel.",
+            "Variants: Available with or without handles (standard vs. heavy-duty).",
+            "Weight Details: Approx. 0.50kg to 0.80kg depending on size.",
+          ],
+        },
+
+        {
+          title: "PROP SLEEVE",
+          short: "Threaded prop outer sleeve",
+          img: "./assets/img/Accessories/prop-sleeves.jpg",
+          desc: `The Prop Sleeve is the threaded outer component welded to the top of the outer tube of a prop. It acts as the track for the Prop Nut, allowing for millimetre-perfect height calibration. Our sleeves are manufactured with high-precision threads that are resistant to concrete buildup and rust. The robust wall thickness ensures that the threads do not strip or deform under the intense pressure of a poured concrete slab.`,
+          points: [
+            "Length: Standard 300mm.",
+            "Standard Thickness: 2.9mm",
+            "Diameter: Designed to fit standard 60.3mm OD prop pipes.",
+          ],
+        },
+
+        {
+          title: "SHEET CLAMP",
+          short: "360° swivel pressed clamp",
+          img: "./assets/img/Accessories/swivel-clamp.jpg",
+          desc: `This Golden Swivel Sheet Pressed Clamp (also known as a swivel coupler) is a high-strength scaffolding component designed to connect two scaffold tubes at any angle. Engineered through a precision sheet-pressing process, it offers 360-degree rotation, providing maximum flexibility for bracing and complex structural configurations. The zinc-plated golden finish ensures excellent corrosion resistance and long-term durability in harsh outdoor construction environments.`,
+          points: [
+            "Material: High-quality Carbon Steel (Q235) with Golden Zinc Plating / Electro-galvanized finish.",
+            "Standard Thickness: 2.5mm to 3.0mm.",
+            "360° rotation connection.",
+            "Pressed steel lightweight high grip.",
+            "Heavy duty T-bolt fastening.",
+            "Anti-corrosive golden coating.",
+          ],
+        },
+
+        {
+          title: "FORGED CLAMP",
+          short: "Heavy duty forged coupler",
+          img: "./assets/img/Accessories/forged-clamp.jpg",
+          desc: `Our Forged Clamps are the industry standard for connecting scaffolding tubes at various angles. Unlike pressed steel alternatives, forged clamps offer superior grip and much higher load-bearing capacity. Drop-forged for zero air pockets, providing maximum safety and longevity.`,
+          points: [
+            "Variants: Right Angle & Swivel.",
+            "Size: 48.3mm OD pipes.",
+            "Weight: 1.0kg to 1.2kg.",
+          ],
+        },
+
+        {
+          title: "JOINT PIN",
+          short: "Vertical tube connector",
+          img: "./assets/img/Accessories/joint-pin.jpg",
+          desc: `The Joint Pin is an internal connector used to join two scaffolding tubes vertically end-to-end. Ensures tight friction fit preventing wobble.`,
+          points: [
+            "Material: Solid MS Bar / Heavy Pipe.",
+            "Size: 200–300mm.",
+            "Compatibility: 48.3mm OD pipes.",
+          ],
+        },
+
+        {
+          title: "SPIGOT PIN",
+          short: "Cuplock vertical spigot",
+          img: "./assets/img/Accessories/spigot-pin.jpg",
+          desc: `Used for modular scaffolding like Cuplock. Includes bolt-hole option for uplift safety.`,
+          points: [
+            "Material: High-Tensile Steel.",
+            "Weight: 0.8kg–1.5kg.",
+            "Finish: Zinc or HDG.",
+          ],
+        },
+
+        {
+          title: "LEDGER BLADE",
+          short: "Cuplock ledger end",
+          img: "./assets/img/Accessories/ledger-blade.jpg",
+          desc: `Drop forged ledger blade for cuplock horizontal members ensuring rigid lock.`,
+          points: [
+            "Material: Drop Forged Steel.",
+            "Application: 48.3mm pipe welding.",
+            "Weight: 160–180 grams.",
+          ],
+        },
+
+        {
+          title: "TOP & BOTTOM CUP",
+          short: "Cuplock locking cups",
+          img: "./assets/img/Accessories/top-&-bottom-cup.jpg",
+          desc: `Core locking components of cuplock system — sliding top cup & fixed bottom cup.`,
+          points: [
+            "Material: Cast Iron / Pressed Steel.",
+            "Variants: Standard & Heavy.",
+            "Weight: Top 0.4kg, Bottom 0.2kg.",
+          ],
+        },
+
+        {
+          title: "TIE ROD SYSTEM",
+          short: "Tie rod + nuts set",
+          img: "./assets/img/Accessories/tie-rod.jpg",
+          desc: `Tie Rod, Anchor Nut & Wing Nut system for wall formwork and column boxes. Dywidag thread type — self-cleaning and extremely strong.`,
+          points: [
+            "Components: Tie Rod + Anchor Nut + Wing Nut.",
+            "Thread: Dywidag type.",
+            "Function: Formwork pressure holding.",
+            "Wide base load distribution.",
+          ],
+        },
+      ];
+
+      /* BUILD CARDS */
+
+      const grid = document.getElementById("productGrid");
+      products.forEach((p, i) => {
+        grid.innerHTML += `
+<div class="productsection-card" onclick="openProduct(${i})">
+<img src="${p.img}">
+<div class="productsection-body">
+<h3>${p.title}</h3>
+<p>${p.short}</p>
+</div>
+</div>`;
+      });
+
+      /* MODAL */
+
+      function openProduct(i) {
+        const p = products[i];
+        document.getElementById("productModalContent").innerHTML = `
+            <img src="${p.img}" style="width:100%;border-radius:8px;margin-bottom:15px;">
+          <h2>${p.title}</h2>
+<p>${p.desc}</p>
+<ul>${p.points.map((x) => `<li>${x}</li>`).join("")}</ul>`;
+        document.getElementById("productModal").classList.add("active");
+      }
+
+      function closeProduct() {
+        document.getElementById("productModal").classList.remove("active");
+      }
+
+      window.onclick = (e) => {
+        if (e.target.id === "productModal") closeProduct();
+      };
+    </script>
+  </body>
+</html>
