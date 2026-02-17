@@ -305,7 +305,7 @@ header .container {
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.292) 0%,
     rgba(0, 0, 0, 0.25) 50%,
     rgba(0, 0, 0, 0) 75%
   );
@@ -314,7 +314,7 @@ header .container {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 520px;
+  max-width: 590px;
   padding: 60px;
   color: #fff;
   animation: fadeUp 0.8s ease forwards;
@@ -410,6 +410,22 @@ header .container {
   }
   .hero-title {
     font-size: 34px;
+  }
+  .hero-img {
+    object-position: right;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.626) 100%,
+      rgba(0, 0, 0, 0.444) 50%,
+      rgba(0, 0, 0, 0.338) 100%
+    );
+  }
+  .hero-card-page .hero-img {
+    object-position: 78%;
   }
 }
 
@@ -1886,6 +1902,27 @@ header .container {
   animation: productsectionPop 0.3s ease;
   position: relative;
 }
+#productModalContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.productModalContent-text {
+  overflow-y: scroll;
+  height: 400px;
+}
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .productsection-modal-box,
+  #productModalContent {
+    grid-template-columns: 1fr;
+    padding: 25px;
+  }
+  .productModalContent-text {
+    overflow-y: auto;
+    height: 100%;
+  }
+}
 
 @keyframes productsectionPop {
   from {
@@ -1923,4 +1960,10 @@ header .container {
 .productsection-modal ul {
   padding-left: 20px;
   line-height: 1.7;
+}
+.product-modal-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  object-fit: cover;
 }

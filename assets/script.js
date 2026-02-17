@@ -1,3 +1,59 @@
+const form = document.getElementById("quoteForm");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Your request has been submitted successfully!");
+          form.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch(() => {
+        alert("Network error. Please try again.");
+      });
+  });
+}
+const form1 = document.getElementById("quoteForm1");
+
+if (form1) {
+  form1.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form1);
+
+    fetch(form1.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          alert("Your request has been submitted successfully!");
+          form1.reset();
+        } else {
+          alert("Something went wrong. Please try again.");
+        }
+      })
+      .catch(() => {
+        alert("Network error. Please try again.");
+      });
+  });
+}
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const menuBar = document.getElementById("menu-bar");
@@ -119,32 +175,3 @@ setInterval(() => {
   if (index >= slides.length) index = 0;
   showSlide(index);
 }, 6000);
-
-// contact
-const form = document.getElementById("quoteForm");
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault(); // stop default redirect
-
-  const formData = new FormData(form);
-
-  fetch(form.action, {
-    method: "POST",
-    body: formData,
-    headers: {
-      Accept: "application/json",
-    },
-  })
-    .then((response) => {
-      if (response.ok) {
-        alert("Your request has been submitted successfully!");
-        form.reset();
-        location.reload(); // refresh page
-      } else {
-        alert("Something went wrong. Please try again.");
-      }
-    })
-    .catch(() => {
-      alert("Network error. Please try again.");
-    });
-});

@@ -114,7 +114,7 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
-        z-index: 999;
+        z-index: 10999;
       }
 
       .productsection-modal.active {
@@ -131,6 +131,7 @@
         overflow-y: auto;
         animation: productsectionPop 0.3s ease;
         position: relative;
+        display: grid;
       }
 
       @keyframes productsectionPop {
@@ -337,10 +338,10 @@
             <h2>Request Quote Form</h2>
 
             <div class="contactsection-grid">
-              <input placeholder="Full Name" />
-              <input placeholder="Email Address" />
+              <input name="name" placeholder="Full Name" />
+              <input name="email" placeholder="Email Address" />
 
-              <input placeholder="Phone" />
+              <input name="phone" placeholder="Phone" />
             </div>
 
             <button class="contactsection-btn">
@@ -426,11 +427,15 @@
       </div>
 
       <div class="contactsection-copy">
-        © Copyright 2018 - 2026 | Website Builder by Right Click Digital
-        Solution | All Rights Reserved
+        © Copyright 2018 - 2026 | Website Builder by
+        <a
+          style="text-decoration: none; color: inherit"
+          href="https://share.google/G8gbt768O3HfvjbI2"
+          ><strong>Right Click Digital Solution</strong></a
+        >
+        | All Rights Reserved
       </div>
     </section>
-
     <div class="float-icons">
       <a href="tel:919884292233" class="icon-flote right-icon"
         ><i class="fa-solid fa-phone"></i>
@@ -575,10 +580,14 @@
       function openProduct(i) {
         const p = products[i];
         document.getElementById("productModalContent").innerHTML = `
-            <img src="${p.img}" style="width:100%;border-radius:8px;margin-bottom:15px;">
-          <h2>${p.title}</h2>
+<div><img src="${p.img}" style="width:100%;border-radius:8px;margin-bottom:15px;"></div>
+<div class="productModalContent-text">
+    <h2>${p.title}</h2>
 <p>${p.desc}</p>
-<ul>${p.points.map((x) => `<li>${x}</li>`).join("")}</ul>`;
+<ul>${p.points.map((x) => `<li>${x}</li>`).join("")}</ul>
+  </div>
+
+        `;
         document.getElementById("productModal").classList.add("active");
       }
 

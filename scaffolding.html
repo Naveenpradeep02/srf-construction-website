@@ -344,8 +344,13 @@
       </div>
 
       <div class="contactsection-copy">
-        © Copyright 2018 - 2026 | Website Builder by Right Click Digital
-        Solution | All Rights Reserved
+        © Copyright 2018 - 2026 | Website Builder by
+        <a
+          style="text-decoration: none; color: inherit"
+          href="https://share.google/G8gbt768O3HfvjbI2"
+          ><strong>Right Click Digital Solution</strong></a
+        >
+        | All Rights Reserved
       </div>
     </section>
 
@@ -390,14 +395,27 @@
         },
       ];
 
+      const modal = document.getElementById("productModal");
+      const content = document.getElementById("productModalContent");
+
       function openProduct(i) {
+        if (!products[i]) return;
+
         const p = products[i];
-        document.getElementById("productModalContent").innerHTML = `
-            <img src="${p.img}" style="width:100%;border-radius:8px;margin-bottom:15px;">
-          <h2>${p.title}</h2>
-   <p>${p.desc}</p>
-   <ul>${p.points.map((x) => `<li>${x}</li>`).join("")}</ul>`;
-        document.getElementById("productModal").classList.add("active");
+
+        content.innerHTML = `
+    <div>
+      <img src="${p.img}" class="product-modal-img">
+    </div>
+    <div class="productModalContent-text">
+      <h2>${p.title}</h2>
+      <p>${p.desc}</p>
+      <ul>${p.points.map((x) => `<li>${x}</li>`).join("")}</ul>
+    </div>
+  `;
+
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
       }
 
       function closeProduct() {

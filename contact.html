@@ -155,15 +155,24 @@
           <h2 class="contactpage-title">Get In Touch</h2>
 
           <form
-            id="quoteForm"
+            id="quoteForm1"
             action="https://formsubmit.co/enquiry@srftraders.in"
             method="POST"
             class="contactpage-inputgroup"
           >
-            <input class="contactpage-input" placeholder="Your Name" />
-            <input class="contactpage-input" placeholder="Email" />
-            <input class="contactpage-input" placeholder="Subject" />
+            <input
+              name="name"
+              class="contactpage-input"
+              placeholder="Your Name"
+            />
+            <input
+              name="phone"
+              class="contactpage-input"
+              placeholder="Your Phone"
+            />
+            <input name="email" class="contactpage-input" placeholder="Email" />
             <textarea
+              name="message"
               class="contactpage-textarea"
               placeholder="Type here..."
             ></textarea>
@@ -213,10 +222,10 @@
             <h2>Request Quote Form</h2>
 
             <div class="contactsection-grid">
-              <input placeholder="Full Name" />
-              <input placeholder="Email Address" />
+              <input name="name" placeholder="Full Name" />
+              <input name="email" placeholder="Email Address" />
 
-              <input placeholder="Phone" />
+              <input name="phone" placeholder="Phone" />
             </div>
 
             <button class="contactsection-btn">
@@ -302,8 +311,13 @@
       </div>
 
       <div class="contactsection-copy">
-        © Copyright 2018 - 2026 | Website Builder by Right Click Digital
-        Solution | All Rights Reserved
+        © Copyright 2018 - 2026 | Website Builder by
+        <a
+          style="text-decoration: none; color: inherit"
+          href="https://share.google/G8gbt768O3HfvjbI2"
+          ><strong>Right Click Digital Solution</strong></a
+        >
+        | All Rights Reserved
       </div>
     </section>
 
