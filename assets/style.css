@@ -1967,3 +1967,7 @@ header .container {
   margin-bottom: 15px;
   object-fit: cover;
 }
+.productModalContent-text ul li {
+  font-weight: 600;
+  list-style: disc;
+}
